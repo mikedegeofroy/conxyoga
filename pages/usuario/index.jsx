@@ -38,11 +38,26 @@ function ProfileData() {
             width={180}
           />
         </div>
+        <Feed></Feed>
         <SignOutButton></SignOutButton>
       </div>
     </div>
   )
   
+}
+
+export function Feed(){
+  return (
+    <div>
+      <h1 className='text-4xl font-medium text-center'>🪬 Tu Feed 🪬</h1>
+      <div>
+      {/* Post */}
+        <div className=''>
+
+        </div>
+      </div>
+    </div>
+  )
 }
 
 

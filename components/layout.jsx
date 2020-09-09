@@ -161,12 +161,12 @@ export default function Layout({ children, pageTitleRaw, invert = false, color =
                         </motion.div>
                     </motion.div>
                     <motion.div variants={item}>
-                        <Link href={'/retiros'}>
+                        <Link href={'/detox'}>
                             <h1 className="mx-3 cursor-pointer w-fit">Detox</h1>
                         </Link>
                     </motion.div>
                     <motion.div variants={item}>
-                        <Link href={'/retiros'}>
+                        <Link href={'/autocuidado'}>
                             <h1 className="mx-3 cursor-pointer w-fit">Autocuidado</h1>
                         </Link>
                     </motion.div>

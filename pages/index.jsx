@@ -1,9 +1,21 @@
 import Layout from '../components/layout'
 import Image from 'next/image'
 
+import { logEvent, getAnalytics } from 'firebase/analytics'
+import { analytics } from '../lib/firebase'
+
+import { useEffect } from 'react'
+
 // import { Suspense } from 'react';
 
 export default function Home() {
+
+    useEffect( () => {
+
+        const analytics = getAnalytics();
+        logEvent(analytics, 'view_item');
+
+    },[])
 
 
     return (
