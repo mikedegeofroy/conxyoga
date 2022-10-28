@@ -90,6 +90,8 @@
         font-size-adjust: 0.5;
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
+        @apply bg-[#f3e9e4];
+        @apply overflow-x-hidden;
     }
 
     html::-webkit-scrollbar {
