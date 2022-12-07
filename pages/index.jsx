@@ -1,93 +1,58 @@
 import Layout from '../components/layout'
-import { Shapes } from "../components/scene";
-import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { transition } from "../lib/settings"
-import useMeasure from "react-use-measure";
-import { useState } from "react";
+import Image from 'next/image'
+
 // import { Suspense } from 'react';
 
 export default function Home() {
 
-    // const [ref, bounds] = useMeasure({ scroll: false });
-    // const [isHover, setIsHover] = useState(false);
-    // const [isPress, setIsPress] = useState(false);
-    // const mouseX = useMotionValue(0);
-    // const mouseY = useMotionValue(0);
-
-    // const resetMousePosition = () => {
-    //     mouseX.set(0);
-    //     mouseY.set(0);
-    // };
 
     return (
-        <Layout>
-            <div className='grid place-items-center mx-5 md:mx-10 h-screen'>
-                <div className='font-["Sauvage-Antique"] grid-cols-6 grid leading-none max-w-[1100px]'>
-                    <div className='text-[10vw] w-fit col-start-1 col-span-5'>LO QUE</div>
-                    <div className='text-[10vw] w-fit col-start-3 col-span-5'>BUSCAS</div>
-                    <div className='text-[10vw] w-fit col-start-2'>ESTA</div>
-                    <div className='text-[10vw] w-fit col-span-6'>DENTRO DE TI</div>
+        <Layout color="white">
+            <div className='pt-24'>                
+                <div className="h-1/2 grid place-items-center bg-center bg-cover bg-[url('/images/DSC_0388.JPG')] p-48">
+
+                    <Image className='cursor-pointer brightness-[200]' draggable="false" src={'/images/logo.png'} width={'2023px'} height={'344px'}></Image>
+                </div>
+                <div className='flex p-5 h-[75vh] overflow-hidden'>
+                    <div className='grid place-items-end text-3xl w-2/12'>
+                        <span className='text-[2em] transform origin-top-left -rotate-90'>YOGA</span>
+                    </div>
+                    <div className="w-10/12 grid grid-cols-3 gap-5">
+                        <div>
+                            <div className="h-1/2 bg-center bg-cover bg-[url('/images/8A02722D-68E3-4CCD-A0E3-63BAD09A6292.jpg')]">
+                                
+                            </div>
+                            <h1 className='text-3xl font-medium my-5'>Hatha</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatem nemo eos officiis ipsa reiciendis velit quia quam? Est, eos.</p>
+                        </div>
+                        <div>
+                            <div className="h-1/2 bg-center bg-cover bg-[url('/images/B6E68E12-42D2-4973-8D96-0CD8E9A2999D.jpg')]">
+                                
+                            </div>
+                            <h1 className='text-3xl font-medium my-5'>Hatha</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatem nemo eos officiis ipsa reiciendis velit quia quam? Est, eos.</p>
+                        </div>
+                        <div>
+                            <div className="h-1/2 bg-center bg-cover bg-[url('/images/4FC54D83-23C8-44B7-BD20-D9C95A55DD4A.jpg')]">
+                                
+                            </div>
+                            <h1 className='text-3xl font-medium my-5'>Hatha</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatem nemo eos officiis ipsa reiciendis velit quia quam? Est, eos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='h-[50vh] mx-10 flex justify-between flex-col overflow-hidden'>
+                    <h1 className='text-6xl text-right'>PRODUCTOS</h1>
+                    <div className='grid grid-cols-2'>
+                        <div>
+                            <p className='text-2xl'>Echa un vistazo a nuestros productos de salud y belleza recomendados.</p>
+                            <p className='text-2xl p-5 rounded-full border-black border-solid w-fit'>Ir a tienda</p>
+                        </div>
+
+                    </div>
+                    <h1 className='text-6xl'>RECOMENDADOS</h1>
                 </div>
             </div>
-
-            {/* Background */}
-
-            {/* <MotionConfig transition={transition}>
-                <motion.button
-                    ref={ref}
-                    initial={false}
-                    animate={isHover ? "hover" : "rest"}
-                    whileTap="press"
-                    variants={{
-                        rest: { scale: 1 },
-                        hover: { scale: 1.5 },
-                        press: { scale: 1.4 }
-                    }}
-                    onHoverStart={() => {
-                        resetMousePosition();
-                        setIsHover(true);
-                    }}
-                    onHoverEnd={() => {
-                        resetMousePosition();
-                        setIsHover(false);
-                    }}
-                    onTapStart={() => setIsPress(true)}
-                    onTap={() => setIsPress(false)}
-                    onTapCancel={() => setIsPress(false)}
-                    onPointerMove={(e) => {
-                        mouseX.set(e.clientX - bounds.x - bounds.width / 2);
-                        mouseY.set(e.clientY - bounds.y - bounds.height / 2);
-                    }}
-                >
-                    <motion.div
-                        className="shapes"
-                        variants={{
-                            rest: { opacity: 0 },
-                            hover: { opacity: 1 }
-                        }}
-                    >
-                        <div className="pink blush" />
-                        <div className="blue blush" />
-                        <div className="container">
-                            <Suspense fallback={null}>
-                                <Shapes
-                                    isHover={isHover}
-                                    isPress={isPress}
-                                    mouseX={mouseX}
-                                    mouseY={mouseY}
-                                />
-                            </Suspense>
-                        </div>
-                    </motion.div>
-                    <motion.div
-                        variants={{ hover: { scale: 0.85 }, press: { scale: 1.1 } }}
-                        className="label"
-                    >
-                        play
-                    </motion.div>
-                </motion.button>
-            </MotionConfig> */}
-
         </Layout>
     )
 }
